@@ -148,7 +148,7 @@ Why This Matters:
 This structure allows CUDA to organize massive parallel computations.
 It can assign different parts of a problem to different Threads, Blocks, and Grids.
 
-
+![](https://siboehm.com/assets/img/CUDA-MMM/naive-kernel.png)
 ## Steps to run the code.
 ```cuda
 nvcc -o sgemm_naive optimize_matmul.cu

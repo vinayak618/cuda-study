@@ -1,5 +1,3 @@
-#pragma once
-
 #include <cstdio>
 #include <cstdlib>
 #include <cublas_v2.h>
@@ -62,9 +60,9 @@ __global__ void sgemm_naive(int M, int N, int K, float alpha, const float *A,
 
 int main() {
     // Matrix dimensions
-    int M = 1024; // Example dimension, change as needed
-    int N = 1024; // Example dimension, change as needed
-    int K = 1024; // Example dimension, change as needed
+    int M = 4096; // Example dimension, change as needed
+    int N = 4096; // Example dimension, change as needed
+    int K = 4096; // Example dimension, change as needed
 
     // Scaling factors
     float alpha = 1.0f;
@@ -110,7 +108,7 @@ int main() {
     free(h_A);
     free(h_B);
     free(h_C);
-
+    
     printf("SGEMM completed successfully.\n");
     return 0;
 }
